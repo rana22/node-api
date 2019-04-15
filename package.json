@@ -1,59 +1,34 @@
 {
-  "name": "search-api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "node-project",
+  "version": "0.0.1",
+  "description": "TypeScript Node API.",
+  "main": "build/index.js",
   "scripts": {
-    "dev": "tsc-watch --onSuccess \"node ./dist/server.js\"",
-    "test": "jest",
-    "start": "npx pm2 start pm2.yaml",
-    "postinstall": "npx tsc"
+    "setup": "node setup.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node build/index.js",
+    "postinstall": "gulp"
   },
-  "jest": {
-    "verbose": true,
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org/tdktechnologies/ts-node-seed.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@types/compression": "0.0.36",
-    "@types/cors": "^2.8.4",
-    "@types/dotenv": "^6.1.1",
-    "@types/express": "^4.16.1",
-    "@types/node": "^11.13.0",
-    "@types/request-promise": "^4.1.42",
-    "@types/supertest": "^2.0.7",
-    "@types/swagger-ui-express": "^3.0.0",
-    "compression": "^1.7.4",
-    "cors": "^2.8.5",
-    "dotenv": "^7.0.0",
-    "express": "^5.0.0-alpha.7",
-    "inversify": "^5.0.1",
-    "inversify-express-utils": "^6.3.2",
-    "pm2": "^3.4.1",
-    "reflect-metadata": "^0.1.13",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.4",
-    "supertest": "^4.0.2",
-    "swagger-ui-express": "^4.0.2",
-    "tsc-watch": "^2.1.2",
-    "typescript": "^3.4.1"
+  "author": "TDK Web & Mobile Team",
+  "license": "MIT",
+  "engines": {
+    "node": "4.6.0"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.11",
-    "jest": "^24.7.1",
-    "ts-jest": "^24.0.1"
-  }
+    "@types/node": "^11.13.4",
+    "typescript": "^3.4.3"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "inversify": "^5.0.1",
+    "inversify-express-utils": "^6.3.2",
+    "reflect-metadata": "^0.1.13"
+  },
+  "keywords": [
+    "node"
+  ]
 }
