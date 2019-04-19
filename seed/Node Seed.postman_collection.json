@@ -1,0 +1,337 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Node Seed",
+		"_postman_id": "bee02b5a-6abe-ff97-af95-0ef2040b571a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"description": "",
+			"item": [
+				{
+					"name": "local:login",
+					"request": {
+						"url": "http://localhost:3000/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"grant_type\": \"password\",\n\t\"username\": \"groot\",\n\t\"password\": \"iamgroot\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "local:createUser",
+					"request": {
+						"url": "http://localhost:3000/users",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer d583e5be-fa96-4033-a3de-aef93e354ab8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"new\",\n\t\"password\": \"password\",\n\t\"firstName\": \"New\",\n\t\"lastName\" : \"User\",\n\t\"email\": \"newEmail@real.com\",\n\t\"status\" : \"active\",\n\t\"roles\" : [2]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "local:updateUser",
+					"request": {
+						"url": "http://localhost:3000/users/2",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer d583e5be-fa96-4033-a3de-aef93e354ab8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"Changed\",\n\t\"lastName\" : \"Changed\",\n\t\"status\" : \"active\",\n\t\"roles\" : [2]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "local:getUser",
+					"request": {
+						"url": "http://localhost:3000/users/2",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer d583e5be-fa96-4033-a3de-aef93e354ab8",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"CHANGED\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "local:getUsers",
+					"request": {
+						"url": "http://localhost:3000/users",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer d583e5be-fa96-4033-a3de-aef93e354ab8",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"CHANGED\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "local:createJobSite",
+					"request": {
+						"url": "http://localhost:3000/jobsites",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer e4de8782-1a34-4aa2-b5b3-9043d2e8b9d8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"New Job Site\",\n\t\"description\": \"I'm a new Job Site!\"\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "local:updateJobSite",
+					"request": {
+						"url": "http://localhost:3000/jobsites/4",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer e4de8782-1a34-4aa2-b5b3-9043d2e8b9d8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Updated Name\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "local:getJobSite",
+					"request": {
+						"url": "http://localhost:3000/jobsites/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer e4de8782-1a34-4aa2-b5b3-9043d2e8b9d8",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"CHANGED\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "local:getJobSites",
+					"request": {
+						"url": "http://localhost:3000/jobsites",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer e4de8782-1a34-4aa2-b5b3-9043d2e8b9d8",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"CHANGED\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "local:createSample",
+					"request": {
+						"url": "http://localhost:3000/samples",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer e4de8782-1a34-4aa2-b5b3-9043d2e8b9d8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"New Sample\",\n\t\"detail\": \"I'm a new Sample!\",\n\t\"type\": \"soil\",\n\t\"groundwaterLeeching\": \"medium\",\n\t\"jobSiteId\": \"1\"\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "local:updateSample",
+					"request": {
+						"url": "http://localhost:3000/samples/10",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer e4de8782-1a34-4aa2-b5b3-9043d2e8b9d8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Updated Name\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "local:getSample",
+					"request": {
+						"url": "http://localhost:3000/samples/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer e4de8782-1a34-4aa2-b5b3-9043d2e8b9d8",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"CHANGED\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "local:getSamples",
+					"request": {
+						"url": "http://localhost:3000/samples",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer e4de8782-1a34-4aa2-b5b3-9043d2e8b9d8",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"CHANGED\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
